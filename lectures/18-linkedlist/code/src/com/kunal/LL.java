@@ -98,15 +98,17 @@ public class LL {
         return val;
     }
 
-    public Node find(int value) {
+   public int find(int value) {
         Node node = head;
+        int index = 0;
         while (node != null) {
             if (node.value == value) {
-                return node;
+                return index;
             }
             node = node.next;
+            index++;
         }
-        return null;
+        return -1;
     }
 
     public Node get(int index) {
